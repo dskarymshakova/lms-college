@@ -30,7 +30,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['smswithdjango.herokuapp.com']
 #ALLOWED_HOSTS = ['127.0.0.1']  # Not recommended but useful in dev mode
-ALLOWED_HOSTS = ['.vercel.app']  # Not recommended but useful in dev mode
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']  # Not recommended but useful in dev mode
 
 # Application definition
 
@@ -168,3 +168,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
