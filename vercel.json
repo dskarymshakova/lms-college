@@ -1,15 +1,14 @@
 {
   "builds": [
     {
-      "src": "college_management_system/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb" }
+      "src": "Dockerfile",
+      "use": "@vercel/docker"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "college_management_system/wsgi.py"
+      "dest": "/"
     }
   ]
 }
