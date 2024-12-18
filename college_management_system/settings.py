@@ -151,6 +151,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Adjust if needed
+    BASE_DIR / "plugins/jquery-ui",
+]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 AUTH_USER_MODEL = 'main_app.CustomUser'
 AUTHENTICATION_BACKENDS = ['main_app.EmailBackend.EmailBackend']
