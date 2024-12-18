@@ -30,7 +30,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['smswithdjango.herokuapp.com']
 #ALLOWED_HOSTS = ['127.0.0.1']  # Not recommended but useful in dev mode
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost']
+#ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost']
 #ALLOWED_HOSTS = ['.vercel.app', '.now.sh']  # Not recommended but useful in dev mode
 
 # Application definition
@@ -168,7 +168,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 EMAIL_USE_TLS = True
 # DEFAULT_FROM_EMAIL = "School Management System <admin@admin.com>"
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
